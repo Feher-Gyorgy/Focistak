@@ -1,0 +1,18 @@
+{
+  "name": "focicsapat",
+  "version": "1.0.0",
+  "description": "npm init -y",
+  "main": "focicsapat",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "proddev": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mysql": "^2.18.1"
+  }
+}
